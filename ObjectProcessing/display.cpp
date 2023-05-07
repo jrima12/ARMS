@@ -11,11 +11,11 @@
 char title[] = " ";
 GLfloat anglePyramid = 0.5f; // Rotational angle for pyramid [NEW]
 int refreshMills = 10;       // refresh interval in milliseconds [NEW]
-GLfloat transx1 = -1.8f;
-GLfloat transx2 = 1.8f;
+GLfloat transx1 = -2.5f;
+GLfloat transx2 = 2.5f;
 GLfloat transy = 0.0f;
 GLfloat scale = -20.0f;
-GLfloat persp = 45.0f;
+GLfloat persp = 10.0f;
 GLfloat rotx = 1.0f;
 GLfloat roty = 1.0f;
 GLfloat rotz = 1.0f;
@@ -170,42 +170,42 @@ void translatetri(int count)
 {
    if (count < 400)
    {
-      transx1 += 0.03f;
-      transx2 += 0.03f;
+      transx1 += 0.003f;
+      transx2 += 0.003f;
    }
    else if (count < 1200)
    {
-      transx1 -= 0.03f;
-      transx2 -= 0.03f;
+      transx1 -= 0.003f;
+      transx2 -= 0.003f;
    }
    else if (count < 1600)
    {
-      transx1 += 0.03f;
-      transx2 += 0.03f;
+      transx1 += 0.003f;
+      transx2 += 0.003f;
    }
    else if (count < 1800)
    {
-      transy += 0.03f;
+      transy += 0.003f;
    }
    else if (count < 2200)
    {
-      transy -= 0.03f;
+      transy -= 0.003f;
    }
    else if (count < 2400)
    {
-      transy += 0.03f;
+      transy += 0.003f;
    }
    else if (count < 2600)
    {
-      transy += 0.03f;
-      transx1 += 0.03f;
-      transx2 += 0.03f;
+      transy += 0.003f;
+      transx1 += 0.003f;
+      transx2 += 0.003f;
    }
    else if (count < 2800)
    {
-      transy -= 0.03f;
-      transx1 -= 0.03f;
-      transx2 -= 0.03f;
+      transy -= 0.003f;
+      transx1 -= 0.003f;
+      transx2 -= 0.003f;
    }
    else
    {
@@ -256,7 +256,7 @@ void updateValues()
       transx2 = 1.5f;
       transy = 0.0f;
       scale = -20.0f;
-      persp = 45.0f;
+      persp = 10.0f;
       anglePyramid = 0.5;
       count = 0;
       mode = x;
